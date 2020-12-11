@@ -1,0 +1,105 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 2,
+        "name": "To login into Crm application",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 16081917900,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "To open the application and navigate url",
+            "match": {
+              "location": "com.stepDefinitions.LoginFreeCrmSteps.to_open_the_application_and_navigate_url()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2360125200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user clicks on login button",
+            "match": {
+              "location": "com.stepDefinitions.LoginFreeCrmSteps.user_clicks_on_login_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 462310400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enters email and password",
+            "match": {
+              "location": "com.stepDefinitions.LoginFreeCrmSteps.user_enters_email_and_password()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 148602400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on login button",
+            "match": {
+              "location": "com.stepDefinitions.LoginFreeCrmSteps.click_on_login_button()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-12-11T16:33:16.216Z",
+        "line": 9,
+        "name": "To verify login and take sceenshot",
+        "description": "",
+        "id": "to-test-the-crm-application;to-verify-login-and-take-sceenshot",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1995900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user is logged in the application",
+            "match": {
+              "location": "com.stepDefinitions.LoginFreeCrmSteps.user_is_logged_in_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 394195700,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "take a screenshot",
+            "match": {
+              "location": "com.stepDefinitions.LoginFreeCrmSteps.take_a_screenshot()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "To test the Crm application",
+    "description": "",
+    "id": "to-test-the-crm-application",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Features/freecrmlogin.feature",
+    "tags": []
+  }
+]
