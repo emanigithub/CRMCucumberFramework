@@ -45,7 +45,7 @@ public class LoginFreeCrmSteps extends Library{
 	@Then("take a screenshot")
 	public void take_a_screenshot() {
 		SeleniumUtilities selutl = new SeleniumUtilities(driver);
-		selutl.to_take_screenshot("/src/test/resources/Screenshots/CRMscreenshot.png");
+		selutl.to_take_screenshot("/src/test/resources/Screenshots/CRMLoginscreenshot.png");
 	}
 
 	/* @Then("logout from the application")

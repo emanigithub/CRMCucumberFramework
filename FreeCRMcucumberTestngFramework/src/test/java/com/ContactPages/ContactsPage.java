@@ -12,7 +12,7 @@ import com.reusabeFunctions.SeleniumUtilities;
 public class ContactsPage {
 	// Below code is with Page Factory Method, collecting all webElements
 	WebDriver driver;
-	@FindBy(xpath="//*[@id=\"main-nav\"]/a[3]/span")
+	@FindBy(xpath="//*[@id=\"main-nav\"]/div[3]/a/i")
 	WebElement contacts;
 	@FindBy(xpath="//*[@id=\"dashboard-toolbar\"]/div[2]/div/a/button")
 	WebElement newbutton;
@@ -27,7 +27,7 @@ public class ContactsPage {
 	@FindBy(xpath="//*[@id=\"ui\"]/div/div[2]/div[2]/div/div[2]/form/div[7]/div[1]/div/div/div/div[3]/div/input")
 	WebElement addrstate;
 	@FindBy(xpath="//*[@id=\"ui\"]/div/div[2]/div[2]/div/div[2]/form/div[7]/div[1]/div/div/div/div[4]/div/input")
-	WebElement addzip;
+	WebElement addrzip;
 	//By addrcountry = 
 	@FindBy(xpath="//*[@id=\"ui\"]/div/div[2]/div[2]/div/div[2]/form/div[4]/div[2]/div/div")
 	WebElement category;
@@ -40,12 +40,16 @@ public class ContactsPage {
 	WebElement email;
 	@FindBy(xpath="//*[@id=\"ui\"]/div/div[2]/div[2]/div/div[2]/form/div[4]/div[1]/div/div/div/div[2]/div/input")
 	WebElement emailtype;
-	@FindBy(xpath="//*[@id=\"dashboard-toolbar\"]/div[2]/div/button[2]")
+	@FindBy(xpath="//*[@id=\"dashboard-toolbar\"]/div[2]/div/button[2]/i")
 	WebElement savebutton;
-	//SeleniumUtilities su;  // if you use any java script in below methods call this utilities,
+	@FindBy(xpath= "//*[@id=\"main-content\"]/div/div[2]/div/table/tbody/tr[1]/td[1]/div/label")
+	WebElement contactscheckbox;
+	@FindBy(xpath= "//*[@id=\"main-content\"]/div/div[2]/div/table/tbody/tr[1]/td[8]/div/button/i")
+	WebElement contactsdeletebutton;
+		//SeleniumUtilities su;  // if you use any java script in below methods call this utilities,
 	
 	//This is Constructor
-	public void ContactPage(WebDriver driver) {
+	public ContactsPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		
@@ -60,16 +64,16 @@ public class ContactsPage {
 		newbutton.click();
 	}
 	
-	public void enterFirstName(String FirstName) {
-		fname.sendKeys(FirstName);
+	public void enterFirstName(String firstName) {
+		fname.sendKeys(firstName);
 	}
 	
-	public void enterLastName(String LastName) {
-		lname.sendKeys(LastName);
+	public void enterLastName(String lastName) {
+		lname.sendKeys(lastName);
 	}
 	
-	public void enterStreetAddress(String StreetAdd) {
-		addrstreet.sendKeys(StreetAdd);
+	public void enterStreetAddress(String streetAdd) {
+		addrstreet.sendKeys(streetAdd);
 	}
 	
 	public void enterCity(String city) {
@@ -80,39 +84,48 @@ public class ContactsPage {
 		addrstate.sendKeys(state);
 	}
 	
-	public void enterAddress(String addr) {
-		addrstreet.sendKeys(addr);
-		
-	}
-	/*		
-		
-		
-		public void cat() {cc
-		WebElement cat = driver.findElement(By.xpath("//*[@id=\"ui\"]/div/div[2]/div[2]/div/div[2]/form/div[4]/div[2]/div/div"));
-		Select obj = new Select(cat);
-		obj.selectByVisibleText("Lead");
+	public void enterZip(String zip) {
+		addrzip.sendKeys(zip);
 		
 	}
 	
-	public void phone(String pho) {
-		driver.findElement(phone).sendKeys(pho);
-		
-	}
-	
-	public void phonetype(String ptype) {
-		driver.findElement(phonetype).sendKeys(ptype);
-	}
-	
-	public void email(String em) {
-		driver.findElement(email).sendKeys(em);
-	}
-	
-	public void emailtype(String emtype) {
-		driver.findElement(emailtype).sendKeys(emtype);
-	}
-	
-	public void savebutton(String sb) {
-		driver.findElement(savebutton).click();
+	/*public void addcountry() {
 		
 	}*/
+	
+	public void selectCategory(String cat) {
+		category.sendKeys(cat);
+		
+	}
+	
+	public void enterPhonenumber(String pho) {
+		phone.sendKeys(pho);
+	}
+	
+	public void enterPhonetype(String photype) {
+		phonetype.sendKeys(photype);
+		
+	}
+	
+	public void enterEmail(String eml) {
+		email.sendKeys(eml);
+	}
+	
+	public void enterEmailtype(String emltype) {
+		emailtype.sendKeys(emltype);
+	}
+	
+	public void clickingSavebutton() {
+		savebutton.click();
+		//savebutton.sendKeys(sbutton);
+	}
+	
+	public void clicingContactscheckbox() {
+		contactscheckbox.click();
+	
+	}
+	public void clickingContactsdeletebutton() {
+		contactsdeletebutton.click();
+		
+	}
 }
