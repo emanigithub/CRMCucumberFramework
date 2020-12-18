@@ -1,11 +1,16 @@
 package com.ContactPages;
 
+//import java.util.Iterator;
+import java.util.List;
+//import java.util.Set;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
+//import org.openqa.selenium.support.ui.Select;
 
 import com.reusabeFunctions.SeleniumUtilities;
 
@@ -46,6 +51,8 @@ public class ContactsPage {
 	WebElement contactscheckbox;
 	@FindBy(xpath= "//*[@id=\"main-content\"]/div/div[2]/div/table/tbody/tr[1]/td[8]/div/button/i")
 	WebElement contactsdeletebutton;
+	@FindBy(xpath=("/html/body/div[3]/div/div[3]/button[2]"))
+	WebElement movetobindeletebutton;
 		//SeleniumUtilities su;  // if you use any java script in below methods call this utilities,
 	
 	//This is Constructor
@@ -121,11 +128,28 @@ public class ContactsPage {
 	}
 	
 	public void clicingContactscheckbox() {
-		contactscheckbox.click();
+		//contactscheckbox.click();
+		//Actions act = new Actions(driver);
+		//act.moveToElement(contactscheckbox).perform();
+		//act.click().perform();
 	
 	}
-	public void clickingContactsdeletebutton() {
+	public void clickingContactsdeletebutton() throws InterruptedException {
 		contactsdeletebutton.click();
 		
+		//Set<String> windows = driver.getWindowHandles();
+		//Iterator<String> it = windows.iterator();
+		//String parent = it.next();
+		//String child = it.next();
+		//driver.switchTo().window(child);
+		
+		//List<WebElement> frame = driver.findElements(By.tagName("iframe"));
+		//System.out.println("No of Frames:" + frame.size());
+		//driver.switchTo().frame(3);
+		//driver.switchTo().frame(0);
+		Thread.sleep(3000);
+		movetobindeletebutton.click();
+				
 	}
+	
 }

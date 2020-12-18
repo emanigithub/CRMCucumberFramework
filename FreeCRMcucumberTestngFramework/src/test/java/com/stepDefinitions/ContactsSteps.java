@@ -116,7 +116,7 @@ public class ContactsSteps extends Library {
 	}
 
 	@Then("user clickied on deletebutton")
-	public void user_clickied_on_deletebutton() {
+	public void user_clickied_on_deletebutton() throws InterruptedException {
 	 cpage.clickingContactsdeletebutton();
 	}
 
